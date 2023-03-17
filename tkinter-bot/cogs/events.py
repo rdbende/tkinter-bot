@@ -79,12 +79,14 @@ class Events(commands.Cog):
             days = (dt_now - dt_joined).days
             is_bot = member.bot
 
-        if days >= 3 and not is_bot:
-            await member.add_roles(member_role, reason="Member for >= 3 days")
-            await member.remove_roles(new_member_role, reason="Member for >= 3 days")
-            await member.send(
-                f"Congratulations, you have been promoted to the role of a @Member in {self.guild.name}"
-            )
+            if days >= 3 and not is_bot:
+                await member.add_roles(member_role, reason="Member for >= 3 days")
+                await member.remove_roles(
+                    new_member_role, reason="Member for >= 3 days"
+                )
+                await member.send(
+                    f"Congratulations, you have been promoted to the role of a @Member in {self.guild.name}"
+                )
 
     @tasks.loop(hours=1)
     async def add_offline_roles(self):
