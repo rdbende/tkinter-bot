@@ -18,7 +18,7 @@ class Commands(commands.Cog):
         description="Provide a basic introduction to the constructor call and link to more info",
     )
     @app_commands.choices(
-        widget=[Choice(name=wid, value=wid) for wid in res.get_all_wigets()]
+        widget=[Choice(name=wid, value=wid) for wid in res.get_all_widgets()]
     )
     @app_commands.describe(widget="The widget to which you want the information about")
     # @app_commands.autocomplete(widget=wid_autocomplete)

@@ -7,16 +7,16 @@ class Resource:
         with open(RESOURCES_DIR / "tk_info.json") as file:
             self.data = json.load(file)
 
-    def get_all_wigets(self):
+    def get_all_widgets(self):
         return list(self.data.keys())
 
     def get_all_tk_wigets(self):
-        return [wid for wid in self.get_all_wigets() if wid.startswith("tk.")]
+        return [wid for wid in self.get_all_widgets() if wid.startswith("tk.")]
 
     def get_all_ttk_wigets(self):
         return [
             wid
-            for wid in self.get_all_wigets()
+            for wid in self.get_all_widgets()
             if wid.startswith("ttk") and wid != "ttk"
         ]
 

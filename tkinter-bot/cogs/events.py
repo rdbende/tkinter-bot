@@ -15,7 +15,7 @@ class Events(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         widgets = res.get_all_widgets()
-        widgets = [wid + "e" for wid in widgets if wid.endswith("x") else wid]
+        widgets = [wid + "e" if wid.endswith("x") else wid for wid in widgets ]
         self.activities = cycle([f"with {wid}s" for wid in widgets])
         
     @commands.Cog.listener()
