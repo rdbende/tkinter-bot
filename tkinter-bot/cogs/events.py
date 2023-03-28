@@ -14,8 +14,10 @@ gh = GitHub()
 class Events(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-        self.activities = cycle([f"with {wid}s" for wid in res.get_all_wigets()])
-
+        widgets = res.get_all_widgets()
+        widgets = [wid + "e" for wid in widgets if wid.endswith("x") else wid]
+        self.activities = cycle([f"with {wid}s" for wid in widgets])
+        
     @commands.Cog.listener()
     async def on_ready(self):
         print(f"{self.bot.user} has logged in")
