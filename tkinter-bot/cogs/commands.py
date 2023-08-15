@@ -55,12 +55,12 @@ class Commands(commands.Cog):
             description="The 3 documentations that we have found useful are:",
             color=color,
         )
+        embed.add_field(name="TkDocs - tutorial", value=utils.messages.DOCS_TK, inline=False)
         embed.add_field(
-            name="NMT docs(Anzel's version)", value=utils.messages.DOCS_ANZEL
+            name="NMT docs (Anzel's version) - reference manual", value=utils.messages.DOCS_ANZEL
         )
-        embed.add_field(name="TkDocs", value=utils.messages.DOCS_TK, inline=False)
         embed.add_field(
-            name="tkinterbook(Effbot)", value=utils.messages.DOCS_EFFBOT, inline=False
+            name="tkinterbook (Effbot) - old but very useful tutorial", value=utils.messages.DOCS_EFFBOT, inline=False
         )
         embed.add_field(
             name="Found more quality docs?",
