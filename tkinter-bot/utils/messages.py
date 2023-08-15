@@ -16,7 +16,7 @@ After pasting your code, save it by clicking the 'Save' (or CTRL+S) button on th
 """
 
 DOCS_ANZEL = "https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/"
-DOCS_TK = "https://tkdocs.com/"
+DOCS_TK = "https://tkdocs.com/tutorial/intro.html"
 DOCS_EFFBOT = (
     "https://web.archive.org/web/20191227181746/http://www.effbot.org/tkinterbook/"
 )
